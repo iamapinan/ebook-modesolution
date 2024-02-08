@@ -1,0 +1,95 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Sarabun:300,400,600);
+// Variables
+@import "variables";
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../../node_modules/sweetalert2/dist/sweetalert2.css";
+// Transition all
+@mixin transition-all ($s) {
+    -webkit-transition: all $s ease;
+    -moz-transition: all $s ease;
+    -o-transition: all $s ease;
+    transition: all $s ease;
+}
+
+body {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.logo-admin {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    display: inline-block !important;
+    margin-top: -5px;
+}
+
+#app1 {
+    ul {
+        li {
+            list-style: none;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            p {
+                color: #aaa;
+            }
+        }
+    }
+}
+
+.media {
+    border-bottom: 1px solid #eee;
+    .media-object {
+        display: block;
+        width: auto;
+        max-height: 200px;
+    }
+    .media-option {
+        margin-right: 15px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    .media-description {
+        color: #888;
+        display: block;
+        max-height: 60px;
+        overflow: hidden;
+        word-wrap: break-word;
+    }
+    .media-icon {
+        ul {
+            padding-left: 0px;
+            li {
+                list-style: none;
+                display: inline-block;
+                margin-right: 10px;
+                color: #2579a9;
+                padding: 0px 6px;
+                background: #eeeeee;
+                border-radius: 15px;
+            }
+        }
+    }
+}
+
+.search-input {
+    width: 50% !important;
+    @include transition-all(1s);
+    &:focus {
+        background-color: #FFFDE7;
+    }
+}
+
+.pagination {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    padding: 10px;
+    border-radius: 0px;
+    margin: 0px;
+}
